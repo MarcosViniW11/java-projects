@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Vendas</h1>
+    </header>
+    <h2>Cadastrar Venda</h2>
+    <main>
+        <form id="form-vendas">
+            <label for="clienteId">ID do cliente:</label>
+            <input type="number" name="" id="clienteId" required>
+
+            <label for="dataId">Data da venda(year-month-day):</label>
+            <input type="text" name="" id="dataId" required><br>
+
+            <br><section id="Itens-Venda">
+                <label for="produtoId">ID do produto:</label>
+                <input type="number" name="" id="produtoId">
+                
+                <br>
+
+                <label for="">Quantidade Vendida:</label>
+                <input type="number" name="" id="qtbVendidaId"><br>
+
+                <br><button type="button" id="botaoCadastrarItensVenda" onclick="carregarItemVendaNaLista()">Cadastrar Item Venda</button>
+
+            </section>
+            
+            <br><button type="submit" id="botaoCadastrarVendas">Cadastrar Venda</button>
+
+        </form><br>
+
+        <section id="ListaItens-Venda"></section><br>
+
+        <h2>Buscar Venda</h2><br>
+
+        <label for="vendaBuscarId">ID da Venda:</label>
+        <input type="number" name="" id="vendaBuscarId"><br>
+        <br><button type="button" onclick="buscarVendaPorId()">Buscar Venda</button>
+
+        <section id="lista Vendas"></section><br>
+
+        <section id="link">
+            <a href="../MenuPrincipal/index.html">Voltar Para o Menu Principal</a>
+        </section>
+
+        
+
+        <script src="script.js"></script>
+    </main>
+    <footer>
+        <p>Feito Por Marcos Rocha</p>
+    </footer>
+    
+</body>
+</html>

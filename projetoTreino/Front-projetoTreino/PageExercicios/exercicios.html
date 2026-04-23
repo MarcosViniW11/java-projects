@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>TreinoApp - Catálogo de Exercícios</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; margin: 30px; background-color: #f8f9fa; }
+        .container { max-width: 800px; margin: auto; }
+        section { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); margin-bottom: 25px; }
+        h2 { color: #333; margin-top: 0; border-bottom: 2px solid #007bff; padding-bottom: 10px; }
+        
+        .form-row { display: flex; gap: 10px; margin-bottom: 15px; flex-wrap: wrap; }
+        input { padding: 10px; border: 1px solid #ddd; border-radius: 5px; flex: 1; min-width: 150px; }
+        
+        button { padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; transition: 0.3s; }
+        .btn-add { background-color: #28a745; color: white; }
+        .btn-add:hover { background-color: #218838; }
+        .btn-search { background-color: #007bff; color: white; }
+        
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; background: white; }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid #eee; }
+        th { background-color: #f1f1f1; color: #444; }
+        tr:hover { background-color: #f9f9f9; }
+        .id-badge { background: #343a40; color: white; padding: 3px 8px; border-radius: 4px; font-size: 0.85em; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <section>
+            <h2>Novo Exercício</h2>
+            <div class="form-row">
+                <input type="text" id="nomeEx" placeholder="Nome (Ex: Supino)">
+                <input type="text" id="descEx" placeholder="Descrição (Ex: Inclinado)">
+                <button class="btn-add" onclick="cadastrarExercicio()">CADASTRAR</button>
+            </div>
+        </section>
+
+        <section>
+            <h2>Catálogo de Exercícios</h2>
+            <div class="form-row">
+                <input type="number" id="searchId" placeholder="Buscar por ID específico...">
+                <button class="btn-search" onclick="buscarOuListar()">BUSCAR / ATUALIZAR</button>
+                <button style="background:#6c757d; color:white;" onclick="listarTodos()">LIMPAR BUSCA</button>
+            </div>
+
+            <table id="tabelaExercicios">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody id="corpoTabela">
+                    </tbody>
+            </table>
+        </section>
+        
+        <p style="text-align: center;"><a href="../PageUsuarios/perfil/perfil.html">Ir para Perfil</a> | <a href="../PageUsuarios/cadastro/cadastro.html">Cadastrar Usuário</a></p>
+    </div>
+
+    <script src="exercicios.js"></script>
+</body>
+</html>

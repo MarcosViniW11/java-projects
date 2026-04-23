@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Gerenciador de Treinos</title>
+    <style>
+        body { font-family: sans-serif; margin: 20px; background-color: #f4f4f4; }
+        section { background: white; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .form-group { margin-bottom: 10px; }
+        label { display: block; font-weight: bold; }
+        input { padding: 8px; width: 200px; border: 1px solid #ccc; border-radius: 4px; }
+        button { padding: 10px 15px; cursor: pointer; background: #28a745; color: white; border: none; border-radius: 4px; }
+        button.add-btn { background: #007bff; }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+        th { background: #f8f9fa; }
+        .exercicio-item { background: #e9ecef; padding: 5px; margin: 5px 0; border-radius: 4px; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+
+    <section>
+        <h2>Cadastrar Novo Treino</h2>
+        <div class="form-group">
+            <label>ID do Usuário:</label>
+            <input type="number" id="userId" placeholder="Ex: 4">
+        </div>
+        <div class="form-group">
+            <label>Nome do Treino:</label>
+            <input type="text" id="nomeTreino" placeholder="Ex: Treino A - Peito">
+        </div>
+
+        <hr>
+        <h4>Adicionar Exercícios ao Treino</h4>
+        <div class="form-group">
+            <input type="number" id="exId" placeholder="ID Exercício (Ex: 5)">
+            <input type="number" id="exSeries" placeholder="Séries">
+            <input type="number" id="exReps" placeholder="Reps">
+            <input type="text" id="exCarga" placeholder="Carga (Ex: 10kg)">
+            <button type="button" class="add-btn" onclick="adicionarExercicioALista()">+ Adicionar Exercício</button>
+        </div>
+
+        <div id="listaTemporaria">
+            </div>
+
+        <br>
+        <button onclick="salvarTreinoCompleto()">SALVAR TREINO NO BANCO</button>
+    </section>
+
+    <section>
+        <h2>Meus Treinos</h2>
+        <div class="form-group">
+            <label>Buscar Treinos do Usuário (ID):</label>
+            <input type="number" id="searchUserId">
+            <button style="background: #6c757d;" onclick="buscarTreinos()">Buscar</button>
+        </div>
+
+        <table id="tabelaTreinos">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome do Treino</th>
+                    <th>Exercícios / Detalhes</th>
+                </tr>
+            </thead>
+            <tbody>
+                </tbody>
+        </table>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

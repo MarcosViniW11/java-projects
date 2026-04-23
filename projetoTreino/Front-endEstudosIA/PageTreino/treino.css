@@ -1,0 +1,150 @@
+:root {
+    --bg: #e8f3ff;
+    --surface: #ffffff;
+    --accent: #0b5fa5;
+    --accent-strong: #084977;
+    --text: #1f3250;
+    --muted: #5f6d7f;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(180deg, #f3f8ff 0%, #ffffff 100%);
+    color: var(--text);
+}
+
+header {
+    background: var(--accent);
+    color: #fff;
+    padding: 1.25rem 1rem;
+    text-align: center;
+}
+
+main {
+    max-width: 920px;
+    margin: 1.5rem auto;
+    padding: 0 1rem 1.5rem;
+}
+
+section#Treino {
+    background: var(--surface);
+    border-radius: 22px;
+    box-shadow: 0 24px 60px rgba(15, 45, 86, 0.12);
+    padding: 1.75rem;
+}
+
+section#Treino h2,
+section#Treino h3 {
+    margin-top: 0;
+    color: var(--accent-strong);
+}
+
+label {
+    display: block;
+    margin-bottom: 0.35rem;
+    font-weight: 600;
+    color: var(--muted);
+}
+
+input {
+    width: 100%;
+    padding: 0.95rem 1rem;
+    margin-bottom: 1rem;
+    border-radius: 14px;
+    border: 1px solid #d7dfe9;
+    background: #f8fbff;
+    font-size: 1rem;
+    color: var(--text);
+}
+
+button {
+    width: 100%;
+    max-width: 100%;
+    padding: 0.95rem 1rem;
+    border-radius: 14px;
+    border: none;
+    background: var(--accent);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+button:hover {
+    background: var(--accent-strong);
+    transform: translateY(-1px);
+}
+
+.table-container {
+    overflow-x: auto;
+    margin-top: 1rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+}
+
+th,
+td {
+    padding: 0.95rem 1rem;
+    border: 1px solid #e4ecf6;
+    text-align: left;
+}
+
+th {
+    background: #f2f7ff;
+    color: var(--text);
+}
+
+.empty {
+    color: var(--muted);
+    font-style: italic;
+    margin-top: 1rem;
+}
+
+#link{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+a{
+    text-decoration: none;
+    background-color: #0b5fa5;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.1s;
+    font-weight: bold;
+}
+
+a:hover{
+    padding: 15px;
+    background-color: #084977;
+    
+}
+
+@media (max-width: 720px) {
+    main {
+        margin: 1rem auto;
+        padding: 0 0.75rem 1rem;
+    }
+
+    header {
+        padding: 1rem 0.75rem;
+    }
+
+    button,
+    input {
+        font-size: 0.95rem;
+    }
+}

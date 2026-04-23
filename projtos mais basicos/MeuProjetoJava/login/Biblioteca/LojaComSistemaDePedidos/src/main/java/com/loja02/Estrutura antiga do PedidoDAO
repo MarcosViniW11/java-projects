@@ -1,0 +1,52 @@
+package com.loja02;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
+
+public class PedidoDAO {
+
+    public void CadastrarPedido(Pedido pedido){
+        String sql="INSERT INTO pedido (cliente_id,produto_id,quantidade,data_pedido) VALUES (?,?,?,?)";
+        try(Connection conn=Conexao.getConexao(); PreparedStatement ps=conn.prepareStatement(sql,PreparedStatement.RETURN_GENERATED_KEYS);){
+            ps.setInt(1,pedido.getIdCliente());
+            ps.setInt(2,pedido.getIdProduto());
+            ps.setInt(3,pedido.getQuantidade());
+            ps.setDate(4,new java.sql.Date(pedido.getDataPedido().getTime()));
+            ps.executeUpdate();
+
+            try(ResultSet rs=ps.getGeneratedKeys()){
+                if(rs.next()){
+                    pedido.setId(rs.getInt(1));
+                }
+            }
+            System.out.println("Cadastro realizado com sucesso");
+
+        } catch (Exception e) {
+            System.out.println("Erro ao Cadastrar pedido\n "+e.getMessage());
+        }
+    }
+
+    public List<Pedido> ListarPedidos(){
+        String sql="SELECT * FROM pedido";
+        List<Pedido> pedidos=new ArrayList<>();
+        try(Connection conn=Conexao.getConexao(); PreparedStatement ps=conn.prepareStatement(sql);ResultSet rs=ps.executeQuery();){
+            while(rs.next()){
+                Pedido pedido=new Pedido();
+                pedido.setId(rs.getInt("id"));
+                pedido.setIdCliente(rs.getInt("cliente_id"));
+                pedido.setIdProduto(rs.getInt("produto_id"));
+                pedido.setQuantidade(rs.getInt("quantidade"));
+                pedido.setDataPedido(rs.getDate("data_pedido"));
+                pedidos.add(pedido);
+
+            }
+
+        }catch (Exception e){
+            System.out.println("Erro ao listar pedidos");
+        }
+        return pedidos;
+    }
+}

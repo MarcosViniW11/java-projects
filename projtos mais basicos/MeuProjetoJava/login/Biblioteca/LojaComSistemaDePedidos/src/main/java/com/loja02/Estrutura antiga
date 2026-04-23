@@ -1,0 +1,61 @@
+package com.loja02;
+
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+public class Main {
+    public static void main(String[] args) {
+        ClientesDAO dao = new ClientesDAO();
+        Clientes c=new Clientes("Ana","Ana@gmail.com","5599223322");
+        //dao.CadastrarCliente(c);
+
+        ProdutoDAO dao2 = new ProdutoDAO();
+        Produto p1=new Produto("Pasta de dente",5,20);
+        //dao2.CadastrarProduto(p1);
+
+        //List<Produto> listaProduto=dao2.ListarProdutos();
+        //for(Produto produto:listaProduto){
+          //  System.out.println(produto);
+        //}
+        //dao2.AtualizarProdutoPorId(p1,1);
+        //dao2.ExcluirProduto(1);
+        //dao.CadastrarCliente(c);
+
+        //List<Clientes> ListaClientes = dao.listarClientes();
+        //for(Clientes cliente : ListaClientes){
+          //  System.out.println(cliente);
+        //}
+
+        //dao.ExcluirCliente(1);
+
+        PedidoDAO pedidoDAO = new PedidoDAO();
+        Pedido pedido = new Pedido();
+        pedido.setIdCliente(6);
+        pedido.setIdProduto(6);
+        pedido.setQuantidade(50);
+        pedido.setDataPedido(new Date(System.currentTimeMillis()));
+
+        //pedidoDAO.CadastrarPedido(pedido);
+
+        //List<Pedido> pedidos = pedidoDAO.ListarPedidos();
+        //for (Pedido p : pedidos) {
+          //  System.out.println(p);
+        //}
+
+        for(Pedido p: pedidoDAO.ListarPedidos()){
+            System.out.println("id:"+p.getId());
+            System.out.println("nome do cliente:"+dao.buscarClientePorId(p.getIdCliente()));
+            System.out.println("nome do produto:"+dao2.BuscarProdutoPorId(p.getIdProduto()));
+            System.out.println("quantidade:"+p.getQuantidade());
+            System.out.println("dataPedido:"+p.getDataPedido());
+
+
+        }
+
+
+
+
+    }
+}

@@ -1,0 +1,7 @@
+package br.com.marcos.biblioteca.repository;
+
+import br.com.marcos.biblioteca.model.Categoria;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface CategoriaRepository extends JpaRepository<Categoria, Long>{
+}

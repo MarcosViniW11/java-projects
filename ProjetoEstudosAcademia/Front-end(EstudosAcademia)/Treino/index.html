@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treino</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Treinos</h1>
+    </header>
+    <main>
+        <form id="form-treino">
+            <label for="clienteId">ID do Cliente:</label>
+            <input type="number" name="" id="clienteId" required>
+
+            <label for="dataId">Data De inicio (year-month-day)</label>
+            <input type="text" name="" id="dataId" required>
+
+            <label for="statusId">Status:</label>
+            <input type="text" name="" id="statusId">
+
+            <br>
+            <br>
+                <label for="">Lista De Exercicios:</label>
+                    
+                    <section id="listaExercicio">
+
+                        <label for="">Exercicio Id:</label>
+                        <input type="number" name="" id="exercicioId"><br>
+
+                        <label for="">Series:</label>
+                        <input type="number" name="" id="seriesId"><br>
+
+                        <label for="">Repeticoes:</label>
+                        <input type="number" name="" id="repeticoesId"><br>
+
+                        <label for="">Tempo de decanço(s)</label>
+                        <input type="number" name="" id="tempoDescancoId"><br><br>
+
+                        <button type="button" id="botaoCadastrarExercicio" onclick="carregarExercicioNoTreino()">Cadastrar exercicio a lista treino:</button>
+
+                    </section>
+                        
+            <br>
+            <button type="submit" id="CadastrarTreino">Cadastrar Treino</button>
+        </form>
+
+        <br>
+            <section id="listaExercicioCada"></section>
+        <br>
+        <section>
+            <h3>Buscar Treino Por Id</h3>
+            <label for="treinoId">Id Do Treino:</label>
+            <input type="number" name="" id="treinoId">
+            <button type="button" id="botaoListarTreinoId" onclick="ListarTreinoId()">Buscar Treino</button>
+        </section>
+        <br>
+        <section id="ListaTreinoId"></section>
+
+        <br>
+        <a href="../MenuPrincipal/index.html">Link para voltar para o Menu Principal</a>
+
+        <script src="codigo.js"></script>
+    </main>
+    <footer>
+        <p>Feito Por Marcos Rocha</p>
+    </footer>
+    
+</body>
+</html>

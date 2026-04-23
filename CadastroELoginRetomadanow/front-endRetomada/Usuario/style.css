@@ -1,0 +1,227 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* FUNDO MODERNO */
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    display: flex;
+    flex-direction: column;
+    color: #333;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 25px;
+    color: white;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+/* MAIN */
+main {
+    flex: 1;
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+/* BOTÃO PRINCIPAL */
+main > button {
+    background: #ffffff;
+    color: #764ba2;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+main > button:hover {
+    transform: translateY(-3px);
+    background: #f1f1f1;
+}
+
+/* CARD CONTAINER */
+#lista {
+    margin-top: 25px;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+/* TABELA ESTILIZADA */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+th {
+    background: #764ba2;
+    color: white;
+    padding: 15px;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+td {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:hover {
+    background: #f9f7ff;
+}
+
+/* BOTÕES DA TABELA */
+td button {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-right: 8px;
+    transition: 0.3s;
+}
+
+/* Atualizar */
+td button:first-child {
+    background: #4CAF50;
+    color: white;
+}
+
+td button:first-child:hover {
+    background: #3e8e41;
+}
+
+/* Deletar */
+td button:last-child {
+    background: #e53935;
+    color: white;
+}
+
+td button:last-child:hover {
+    background: #b71c1c;
+}
+
+/* FORM DE ATUALIZAÇÃO */
+form {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 450px;
+    margin: auto;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    transition: 0.3s;
+}
+
+form input:focus {
+    border-color: #764ba2;
+    box-shadow: 0 0 8px rgba(118,75,162,0.3);
+    outline: none;
+}
+
+form button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    background: #764ba2;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background: #5a378c;
+}
+
+/* LINK */
+#link {
+    margin-top: 30px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 15px;
+    color: white;
+    font-size: 14px;
+}
+
+/* ANIMAÇÃO */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    th {
+        display: none;
+    }
+
+    tr {
+        margin-bottom: 15px;
+        background: white;
+        border-radius: 10px;
+        padding: 15px;
+    }
+
+    td {
+        padding: 10px 0;
+        border: none;
+    }
+
+    td button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    form {
+        padding: 20px;
+    }
+}

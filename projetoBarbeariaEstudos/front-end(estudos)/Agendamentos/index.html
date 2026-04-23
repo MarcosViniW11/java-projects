@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header><h1>Agendamento</h1></header>
+    <main>
+        <section id="form">
+            <h2>Cadastrar um Agendamento</h2><br>
+            <form id="form-agendamento">
+                <label for="clienteId">Id do Cliente:</label>
+                <input type="number" name="" id="clienteId"><br><br>
+
+                <label for="profissionalId">Id do Profissional:</label>
+                <input type="number" name="" id="profissionalId"><br><br>
+
+                <label for="servicoId">Id do serviço:</label>
+                <input type="number" name="" id="servicoId"><br><br>
+
+                <label for="dataId">Data e hora do Agendamento (year-mouth-day T:hours):</label>
+                <input type="text" name="" id="dataId"><br><br>
+
+                <button type="submit" id="botao-Cadastrar">Cadastrar Agendamento</button>
+            </form>
+
+        </section><br>
+
+        <section id="buscarAgendamento">
+            <label for="">Id de Agendamento:</label>
+            <input type="number" name="" id="agendamentoId">
+            <button type="button" id="botaoBuscarAgendamento" onclick="buscarAgendamento()">Buscar</button>
+        </section>
+        
+
+        <section id="lista-agendamentos"></section><br><br>
+
+        <section id="linkMenu">
+            <a href="../MenuPrincipal/index.html">Voltar para o menu</a>
+        </section>
+
+        <script src="script.js"></script>
+    </main>
+
+    <footer>
+        <p>Feito Por Marcos Vinícius</p>
+    </footer>
+    
+</body>
+</html>

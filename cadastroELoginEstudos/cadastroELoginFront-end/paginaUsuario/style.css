@@ -1,0 +1,135 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: rgb(231, 231, 231);
+}
+
+header {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.877);
+    padding: 30px;
+    color: rgb(231, 231, 231);
+    border-radius: 10px;
+    margin-bottom: 90px;
+}
+
+section#opcoes {
+    background-color: rgba(0, 0, 0, 0.884);
+    max-width: 500px;
+    margin: auto;
+    color: rgb(241, 241, 241);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+#botaoInformacoes {
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+#botaoInformacoes:hover {
+    padding: 13px;
+    background-color: lightgray;
+}
+
+section#lista-informações {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+tr,
+td,
+th {
+    padding: 5px;
+}
+
+form {
+    background-color: rgb(62, 166, 235);
+    padding: 30px;
+    color: white;
+    border-radius: 10px;
+}
+
+input {
+    padding: 2px;
+    border-radius: 5px;
+    background-color: lightgray;
+    transition: 0.2s;
+}
+
+input:hover {
+    background-color: white;
+    padding: 4px;
+}
+
+input:focus {
+    background-color: white;
+    padding: 5px;
+}
+
+#botaoAtualizarSenha {
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+#botaoAtualizarSenha:hover {
+    background-color: lightgray;
+    padding: 12px;
+}
+
+#botaoDeletar,
+#botaoEditar {
+    padding: 5px;
+    border-radius: 5px;
+    transition: 0.1s;
+}
+
+#botaoDeletar:hover {
+    background-color: rgb(245, 101, 101);
+    color: white;
+    padding: 7px;
+}
+
+#botaoEditar:hover {
+    background-color: rgb(255, 247, 130);
+    padding: 7px;
+}
+
+section#link {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+section#link>a {
+    text-decoration: none;
+    padding: 15px;
+    background-color: dodgerblue;
+    border-radius: 10px;
+    color: white;
+    transition: 0.2s;
+}
+
+section#link>a:hover {
+    padding: 20px;
+    background-color: rgb(29, 115, 202);
+}
+
+footer {
+    text-align: center;
+}
+
+footer>p {
+    color: rgba(0, 0, 0, 0.5);
+}

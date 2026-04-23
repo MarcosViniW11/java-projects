@@ -1,0 +1,75 @@
+/* RESET SIMPLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ESTILO GLOBAL */
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f7;
+    color: #222;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* CABEÇALHO */
+header {
+    background: #2d2e32;
+    color: #fff;
+    padding: 25px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+/* TÍTULOS */
+h1 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* CONTAINER PRINCIPAL */
+.DivPrincipal {
+    background: #fff;
+    padding: 25px;
+    max-width: 450px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+/* LINKS */
+.DivPrincipal a {
+    display: block;
+    background: #2d79f6;
+    color: #fff;
+    padding: 12px;
+    margin: 12px 0;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 17px;
+    transition: 0.2s;
+}
+
+.DivPrincipal a:hover {
+    background: #185ad6;
+    transform: translateY(-2px);
+}
+
+/* FOOTER */
+footer {
+    margin-top: 40px;
+    text-align: center;
+    color: #555;
+    font-size: 14px;
+}

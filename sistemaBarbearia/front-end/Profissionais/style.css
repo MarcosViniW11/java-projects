@@ -1,0 +1,103 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: rgb(224, 224, 224);
+}
+
+header{
+    background-color: rgba(0, 0, 0, 0.842);
+    text-align: center;
+    padding: 30px;
+    border-radius: 10px;
+    color: rgb(219, 219, 219);
+    margin-bottom: 30px;
+}
+
+#form{
+    background-color: rgba(0, 0, 0, 0.836);
+    text-align: center;
+    color: rgb(224, 224, 224);
+    padding: 30px;
+    max-width: 500px;
+    max-height: 400px;
+    margin: auto;
+    border-radius: 10px;
+}
+
+#form>form>input{
+    background-color: lightgray;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+#form>form>input:focus{
+    background-color: white;
+    padding: 5px;
+}
+
+#botaoCadastrar{
+    padding: 8px;
+    border-radius: 7px;
+    transition: 0.2s;
+}
+
+#botaoCadastrar:hover{
+    padding: 12px;
+    background-color: lightgray;
+}
+
+#listaProfissionais{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+tr,th,td{
+    padding: 5px;
+}
+
+#botaoEditar,#botaoDeletar{
+    padding: 5px;
+    border-radius: 5px;
+    transition: 0.1s;
+}
+
+#botaoEditar:hover,#botaoDeletar:hover{
+    padding: 7px;
+    background-color: lightgray;
+}
+
+#botaoMenu{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+a{
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.822);
+    color: lightgray;
+    padding: 10px;
+    border-radius: 9px;
+    transition: 0.1s;
+}
+
+a:hover{
+    background-color: black;
+    padding: 12px;
+}
+
+footer{
+    text-align: center;
+}
+
+footer>p{
+    color: rgba(0, 0, 0, 0.486);
+}

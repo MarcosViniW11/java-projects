@@ -1,0 +1,8 @@
+bella;fera;2211;true
+Alice no pais das Maravilhas;ibeiroR;223311;true
+Principe dos aneis;Mark;99832;true
+Cadaver ouve radio;flavio;223344;true
+Gigante;tony;556644;true
+João;Dom;226677;true
+Pequenino;tony;778866;true
+O Mediano;tony;443322;true

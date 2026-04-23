@@ -1,0 +1,113 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: lightgray;
+}
+
+header{
+    background-color: rgba(0, 0, 0, 0.842);
+    border-radius: 10px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.918);
+    padding: 30px;
+    margin-bottom: 60px;
+}
+
+h2{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+form{
+    background-color: rgb(182, 182, 182);
+    text-align: center;
+    margin: auto;
+    max-width: 500px;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+form>input{
+    border-radius: 4px;
+    background-color: lightgray;
+    transition: 0.2s;
+}
+
+form>input:focus{
+    padding: 5px;
+    background-color: white;
+}
+
+form>button{
+    padding: 10px;
+    background-color: rgb(204, 203, 203);
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+form>button:hover{
+    padding: 12px;
+    font-weight: bold;
+}
+
+#lista-clientes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+table{
+    display: block;
+}
+
+#botaoEditar,#botaoDeletar{
+    padding: 5px;
+    transition: 0.2s;
+    border-radius: 5px;
+}
+
+#botaoEditar:hover,#botaoDeletar:hover{
+    padding: 6px;
+    background-color: lightgrey;
+}
+
+tr,td,th{
+    padding: 7px;
+}
+
+#link{
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+a{
+    text-decoration: none;
+    background-color: rgb(196, 196, 196);
+    padding: 10px;
+    border-radius: 7px;
+    transition: 0.2s;
+    color: black;
+}
+
+a:hover{
+    background-color: rgb(146, 146, 146);
+    color: white;
+    font-weight: bold;
+    padding: 15px;
+}
+
+footer{
+    text-align: center;
+    color: rgba(0, 0, 0, 0.432);
+}
+

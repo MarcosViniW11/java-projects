@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Oficina - Sistema de Vendas</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+<header>
+    <h1>Sistema de Vendas</h1>
+</header>
+
+<main>
+
+<!-- FORM CADASTRAR VENDA -->
+<section class="form-section">
+    <h2>Cadastrar Venda</h2>
+
+    <form id="vendaForm" onsubmit="event.preventDefault(); enviarVenda();">
+
+        <div class="input-group">
+            <label for="clienteId">ID do Cliente:</label>
+            <input type="number" id="clienteId" required />
+        </div>
+
+        <div class="input-group">
+            <label for="dataVenda">Data da Venda:</label>
+            <input type="date" id="dataVenda" required />
+        </div>
+
+        <div class="input-group">
+            <label for="status">Status:</label>
+            <select id="status">
+                <option value="ABERTA">ABERTA</option>
+                <option value="FINALIZADA">FINALIZADA</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label for="total">Total:</label>
+            <input type="number" id="total" step="0.01" required />
+        </div>
+
+        <h3>Itens da Venda</h3>
+
+        <div class="input-group">
+            <label for="produtoId">Produto (ID):</label>
+            <input type="number" id="produtoId" />
+        </div>
+
+        <div class="input-group">
+            <label for="quantidade">Quantidade:</label>
+            <input type="number" id="quantidade" />
+        </div>
+
+        <div class="input-group">
+            <label for="precoUnitario">Preço Unitário:</label>
+            <input type="number" id="precoUnitario" step="0.01" />
+        </div>
+
+        <button type="button" id="addItemBtn" onclick="adicionarItem()">Adicionar Item</button>
+
+        <h4>Itens adicionados:</h4>
+        <ul id="listaItens"></ul>
+
+        <button type="submit" class="submit-btn">Salvar Venda</button>
+    </form>
+</section>
+<!--section para clientes-->
+<section class="form-section">
+    <h2>Cadastrar Cliente</h2>
+
+    <form id="clienteForm" onsubmit="event.preventDefault(); cadastrarCliente();">
+        <div class="input-group">
+            <label for="clienteNome">Nome:</label>
+            <input type="text" id="clienteNome" required />
+        </div>
+
+        <div class="input-group">
+            <label for="clienteEmail">Email:</label>
+            <input type="email" id="clienteEmail" required />
+        </div>
+
+        <button type="submit" class="submit-btn">Salvar Cliente</button>
+    </form>
+</section>
+<!--section para produtos-->
+<section class="form-section">
+    <h2>Cadastrar Produto</h2>
+
+    <form id="produtoForm" onsubmit="event.preventDefault(); cadastrarProduto();">
+        <div class="input-group">
+            <label for="produtoNome">Nome:</label>
+            <input type="text" id="produtoNome" required />
+        </div>
+
+        <div class="input-group">
+            <label for="produtoPreco">Preço:</label>
+            <input type="number" id="produtoPreco" step="0.01" required />
+        </div>
+
+        <button type="submit" class="submit-btn">Salvar Produto</button>
+    </form>
+</section>
+
+
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Treino Page</h1>
+    </header>
+    <main>
+        <section id="Treino">
+            <h2>Cadastrar Treino</h2>
+
+            <label for="">User ID:</label>
+            <input type="number" name="" id="userID"><br><br>
+
+            
+            <label for="">Nome Do Treino</label>
+            <input type="text" name="" id="nomeTreinoId">
+
+            <section id="exerciciosId">
+                <h3>Exercicios:</h3>
+
+                
+                <label for="exerID">Exercicio ID:</label>
+                <input type="number" name="" id="exerID"><br><br>
+                    
+                <label for="seriesId">Series:</label>
+                <input type="number" name="" id="seriesId"><br><br>
+                    
+                <label for="repsId">Repetições:</label>
+                <input type="number" name="" id="repsId"><br><br>
+                
+                <label for="cargID">Carga:</label>
+                <input type="number" name="" id="cargID"><br><br>
+
+                <button type="button" onclick="AdicionarExercicio()">Adicionar Exercicio</button><br><br>
+
+                <section id="listaExercicios"></section>
+
+                <script src="treino.js"></script>
+            </section>
+
+            <label for="emailTxt">Não sabe o seu ID coloque seu email</label>
+            <input type="text" name="" id="emailTxt" placeholder="exemplo@gmail.com">
+            <button type="button" id="botaoBuscarPorEmail" onclick="buscarEmailPorID()">Clique Aqui</button><br><br>
+
+            <button type="button" id="botaoCadastrarTreinoId" onclick="cadastrarTreinoCompleto()">Cadastrar Treino</button>
+        </section>
+    </main>
+</body>
+</html>

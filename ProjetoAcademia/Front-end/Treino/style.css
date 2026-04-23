@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+    background-color: lightyellow;
+    line-height: 1.6;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.822);
+    padding: 30px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.925);
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+main {
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.103);
+    border-radius: 12px;
+
+}
+
+form {
+    background-color: rgba(0, 0, 0, 0.089);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+input {
+    background-color: rgba(0, 0, 0, 0.13);
+    border-radius: 7px;
+    transition: 0.3s;
+    padding: 2px;
+}
+
+input:focus {
+    background-color: white;
+    padding: 3px;
+}
+
+form>button,
+section#listaExercicio>button {
+    background-color: rgba(0, 0, 0, 0.103);
+    padding: 8px;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+form>button:hover,
+section#listaExercicio>button:hover {
+    padding: 10px;
+    font-weight: bolder;
+    background-color: rgba(0, 0, 0, 0.027);
+
+}
+
+#CadastrarTreino{
+    background-color: rgb(224, 224, 224);
+}
+
+#botaoDeletarLista,
+#botaoEditarLista {
+    padding: 5px;
+    border-radius: 4px;
+    transition: 0.1s;
+}
+
+#botaoDeletarLista:hover,
+#botaoEditarLista:hover {
+    padding: 6px;
+    background-color: rgba(0, 0, 0, 0.021);
+    font-weight: bolder;
+}
+
+#botaoListarTreinoId {
+    padding: 8px;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+#botaoListarTreinoId:hover {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.014);
+    font-weight: bolder;
+}
+
+.botaoDeletarTreino {
+    padding: 5px;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+.botaoDeletarTreino:hover {
+    padding: 7px;
+    background-color: lightcoral;
+    font-weight: bolder;
+}
+
+tr,
+th,
+td {
+    padding: 5px;
+}
+
+a {
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.116);
+    padding: 10px;
+    color: black;
+    border-radius: 10px;
+    transition: 0.1s;
+}
+
+a:hover {
+    padding: 12px;
+    font-weight: bolder;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    color: rgba(0, 0, 0, 0.637);
+}
